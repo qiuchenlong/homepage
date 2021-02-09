@@ -32,6 +32,20 @@
 
 	<!-- Responsive CSS -->
 	<link rel="stylesheet" type="text/css" href="http://v.bootstrapmb.com/2020/2/aj68s7436/css/responsive.css">
+  
+	<script src="https://www.google.com/recaptcha/api.js?render=6LcFevoUAAAAACEdtUxI8JKtDeA1ssM9rrw4B0U5"></script>
+	
+	<script>
+	    function onClick(e) {
+	      e.preventDefault();
+	      grecaptcha.ready(function() {
+		grecaptcha.execute('6LcFevoUAAAAACEdtUxI8JKtDeA1ssM9rrw4B0U5', {action: 'submit'}).then(function(token) {
+		  // Add your logic to submit to your backend server here.
+		});
+	      });
+	    }
+	  </script>
+	
 
     <style>
         .container {
